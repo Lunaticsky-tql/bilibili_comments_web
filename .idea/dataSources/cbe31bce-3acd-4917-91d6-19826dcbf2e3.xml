@@ -999,51 +999,113 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="289" parent="288" name="id">
+    <table id="289" parent="274" name="likes_rank">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="290" parent="274" name="replies_rank">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="291" parent="288" name="id">
       <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="290" parent="288" name="name">
+    <column id="292" parent="288" name="name">
       <DataType>text|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="291" parent="288" name="post_time">
+    <column id="293" parent="288" name="post_time">
       <DataType>text|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="292" parent="288" name="content">
+    <column id="294" parent="288" name="content">
       <DataType>text|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="293" parent="288" name="likes">
+    <column id="295" parent="288" name="likes">
       <DataType>bigint|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="294" parent="288" name="user_level">
+    <column id="296" parent="288" name="user_level">
       <DataType>bigint|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="295" parent="288" name="sex">
+    <column id="297" parent="288" name="sex">
       <DataType>text|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="296" parent="288" name="is_vip">
+    <column id="298" parent="288" name="is_vip">
       <DataType>bigint|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="297" parent="288" name="vip_type">
+    <column id="299" parent="288" name="vip_type">
       <DataType>bigint|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="298" parent="288" name="follow_comments">
+    <column id="300" parent="288" name="follow_comments">
       <DataType>bigint|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="299" parent="288" name="avatar">
+    <column id="301" parent="288" name="avatar">
       <DataType>text|0s</DataType>
       <Position>11</Position>
     </column>
-    <index id="300" parent="288" name="ix_comment_data_full_id">
+    <index id="302" parent="288" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="303" parent="288" name="ix_comment_data_full_id">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="304" parent="288" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="305" parent="289" name="id">
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="306" parent="289" name="name">
+      <DataType>text|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="307" parent="289" name="likes">
+      <DataType>bigint|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <index id="308" parent="289" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="309" parent="289" name="ix_likes_rank_id">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="310" parent="289" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="311" parent="290" name="id">
+      <DataType>bigint|0s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="312" parent="290" name="name">
+      <DataType>text|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="313" parent="290" name="follow_comments">
+      <DataType>bigint|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <index id="314" parent="290" name="ix_replies_rank_id">
       <ColNames>id</ColNames>
       <Type>btree</Type>
     </index>
